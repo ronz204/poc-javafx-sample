@@ -1,5 +1,6 @@
 plugins {
     id "application"
+    id "org.openjfx.javafxplugin" version "0.1.0"
 }
 
 repositories {
@@ -8,6 +9,9 @@ repositories {
 
 dependencies {
     implementation libs.guava
+    implementation libs.javafx.fxml
+    implementation libs.javafx.controls
+
     testImplementation libs.junit.jupiter
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
@@ -16,6 +20,11 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(24)
     }
+}
+
+javafx {
+    version = "25-ea+5"
+    modules = [ "javafx.controls", "javafx.fxml" ]
 }
 
 application {
