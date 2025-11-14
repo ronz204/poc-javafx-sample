@@ -8,6 +8,7 @@
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.poc.app.controllers.FirstController"
+      stylesheets="@../styles/First.css"
       alignment="CENTER"
       spacing="20"
       prefHeight="300.0"
@@ -19,16 +20,16 @@
     
     <Label fx:id="messageLabel"
            text="Hello from JavaFX MVC!"
-           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+           styleClass="label-title"/>
     
     <Button fx:id="actionButton"
             text="Click here"
             onAction="#handleActionButton"
-            style="-fx-font-size: 14px; -fx-padding: 10 20;"/>
+            styleClass="action-button"/>
     
     <Button fx:id="resetButton"
             text="Reset"
             onAction="#handleResetButton"
-            style="-fx-font-size: 12px; -fx-padding: 5 15;"/>
+            styleClass="reset-button"/>
     
 </VBox>
